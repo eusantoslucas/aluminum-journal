@@ -8,33 +8,33 @@ This project uses React 19, which has compatibility issues with certain dependen
 
 ### Solution Implemented
 
-To resolve this dependency conflict, the following changes have been made:
+Para resolver este conflito de dependências, as seguintes alterações foram feitas:
 
-1. Added `--legacy-peer-deps` flag to the build script in package.json
-2. Added an install script that uses the `--legacy-peer-deps` flag
+1. Adicionada a flag `--force` ao script de build no package.json
+2. Adicionado um script de setup que usa a flag `--force`
 
 ```json
 "scripts": {
   "dev": "next dev",
-  "build": "next build --legacy-peer-deps",
+  "build": "next build --force",
   "start": "next start",
   "lint": "next lint",
-  "install": "npm install --legacy-peer-deps"
+  "setup": "npm install --force"
 }
 ```
 
 ### Installation
 
-To install dependencies, run:
+Para instalar as dependências, execute:
 
 ```bash
 npm run setup
 ```
 
-Or manually use:
+Ou manualmente use:
 
 ```bash
-npm install --legacy-peer-deps
+npm install --force
 ```
 
 ## Estrutura Recomendada
@@ -51,7 +51,7 @@ Recomendamos o uso do [Render.com](https://render.com/) para hospedagem gratuita
 3. Escolha o repositório deste projeto.
 4. Configure o build command para:
    ```
-   npm install --legacy-peer-deps && npm run build
+   npm install --force && npm run build
    ```
 5. Configure o start command para:
    ```

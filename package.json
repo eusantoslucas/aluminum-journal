@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --legacy-peer-deps",
+    "build": "next build --force",
     "start": "next start",
     "lint": "next lint",
-    "setup": "npm install --legacy-peer-deps"
+    "setup": "npm install --force"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
