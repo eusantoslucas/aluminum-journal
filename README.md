@@ -28,7 +28,7 @@ To resolve this dependency conflict, the following changes have been made:
 To install dependencies, run:
 
 ```bash
-npm run install
+npm run setup
 ```
 
 Or manually use:
