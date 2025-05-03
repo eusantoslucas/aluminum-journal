@@ -10,13 +10,13 @@ This project uses React 19, which has compatibility issues with certain dependen
 
 Para resolver este conflito de dependências, as seguintes alterações foram feitas:
 
-1. Adicionada a flag `--force` ao script de build no package.json
-2. Adicionado um script de setup que usa a flag `--force`
+1. Removida a flag `--force` do script de build, pois não é suportada pelo Next.js
+2. Mantido o script de setup que usa a flag `--force` para instalação de dependências
 
 ```json
 "scripts": {
   "dev": "next dev",
-  "build": "next build --force",
+  "build": "next build",
   "start": "next start",
   "lint": "next lint",
   "setup": "npm install --force"
@@ -51,7 +51,7 @@ Recomendamos o uso do [Render.com](https://render.com/) para hospedagem gratuita
 3. Escolha o repositório deste projeto.
 4. Configure o build command para:
    ```
-   npm install --force && npm run build
+   npm run setup && npm run build
    ```
 5. Configure o start command para:
    ```
